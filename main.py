@@ -9,9 +9,9 @@ import argparse
 import pyhocon
 import random
 
-from src.dataCenter import *
-from src.utils import *
-from src.models import *
+from dataCenter import *
+from utils import *
+from models import *
 
 parser = argparse.ArgumentParser(description='pytorch version of GraphSAGE')
 
@@ -27,7 +27,7 @@ parser.add_argument('--learn_method', type=str, default='sup')
 parser.add_argument('--unsup_loss', type=str, default='normal')
 parser.add_argument('--max_vali_f1', type=float, default=0)
 parser.add_argument('--name', type=str, default='debug')
-parser.add_argument('--config', type=str, default='./src/experiments.conf')
+parser.add_argument('--config', type=str, default='./experiments.conf')
 args = parser.parse_args()
 
 if torch.cuda.is_available():
